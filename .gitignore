@@ -2,6 +2,7 @@
 terraform.tfstate.backup
 terraform.tfstate
 .terraform/*
+*/.terraform/*
 .terraform.tfstate.lock.info
 id
 mysql/.terraform/*
