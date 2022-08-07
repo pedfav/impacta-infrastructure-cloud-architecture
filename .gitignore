@@ -1,0 +1,7 @@
+.terraform.lock.hcl
+terraform.tfstate.backup
+terraform.tfstate
+.terraform/*
+.terraform.tfstate.lock.info
+id
+mysql/.terraform/*
