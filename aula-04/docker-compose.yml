@@ -1,0 +1,30 @@
+
+networks:
+  bridge-net:
+    driver: bridge
+
+services:
+  web:
+    image: nginx
+    container_name: "nginx"
+    ports:
+      - "8080:80"
+    environment:
+      - NGINX_HOST=pedfav.com
+      - NGINX_PORT=80
+    networks:
+      - bridge-net
+
+  db:
+    image: mysql
+    container_name: "mysql"
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: pedfav
+      MYSQL_USER: pedfav
+      MYSQL_PASSWORD: pedfav123
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - bridge-net
